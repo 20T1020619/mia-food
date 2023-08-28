@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/responsive.css" />
+        <title>miafood.vn/donhang</title>
+    </head>
+    <body>
+        <header id="header">
+            <input hidden type="checkbox" checked class="header__checkbox" id="header__sidebar-checkbox" />
+            <div class="container">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./assets/img/logo1.png" class="logo" alt="logo" />
+                        </a>
+                        <span class="header__logo-text">MIAFOOD</span>
+                    </div>
+
+                    <label for="header__sidebar-checkbox" class="header__bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+
+                    <ul id="navbar">
+                        <li><a href="banggia.html">BẢNG GIÁ</a></li>
+                        <li><a href="index.html#sanpham">SẢN PHẨM</a></li>
+                        <li><a href="index.html#khuyenmai">KHUYẾN MÃI</a></li>
+                        <li><a class="navbar--selected" href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
+                    </ul>
+
+                    <!-- <div class="mobile-sidebar-wrapper">
+                        <div class="container">
+                            <ul id="mobile-sidebar">
+                                <li><a href="banggia.html">BẢNG GIÁ</a></li>
+                                <li class="mobile-navbar--selected"><a class="navbar--selected" href="#sanpham">SẢN PHẨM</a></li>
+                                <li><a href="#khuyenmai">KHUYẾN MÃI</a></li>
+                                <li><a href="theodoidonhang.html">THEO DÕI ĐƠN HÀNG</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="order__overlay" style="display: none"></div>
+            <div class="container">
+                <form class="order__dialog" style="display: none">
+                    <div class="order__dialog-content">
+                        <div class="order__dialog-header">
+                            <h5>Đăng Nhập</h5>
+                            <div class="order__dialog-icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="order__dialog-body">
+                            <div class="order__dialog-form">
+                                <span>Số điện thoại</span>
+                                <input type="text" placeholder="Nhập số điện thoại của bạn" />
+                            </div>
+                            <div class="order__dialog-form form--relative">
+                                <span>Mã xác minh</span>
+                                <input type="text" placeholder="Nhập mã xác minh" />
+                                <a href="#!">Gửi mã</a>
+                            </div>
+                        </div>
+                        <div class="order__dialog-footer">
+                            <button class="order__dialog-button order__dialog-button--otp">
+                                Đăng nhập với OTP
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/zalo/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--zalo"
+                                >Đăng nhập với Zalo</a
+                            >
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/google/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--google"
+                                >Đăng nhập với Google</a
+                            >
+                        </div>
+                        <div class="order__dialog-footer">
+                            <a
+                                href="/facebook/login.aspx?callback=don-hang"
+                                class="order__dialog-button order__dialog-button--facebook"
+                                >Đăng nhập với Facebook</a
+                            >
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="order">
+                <div class="container">
+                    <div class="order__container">
+                        <div class="order__user-info">
+                            <div class="order__description">
+                                <i class="fa-solid fa-id-card"></i>
+                                <span class="order__heading">thông tin tài khoản</span>
+                            </div>
+                            <div class="order__avt">
+                                <img src="./assets/img/riin-raiden.jpg" alt="" />
+                            </div>
+                            <h5 class="order__name">Họ tên: Bảo Nguyễn Đình</h5>
+                            <h5 class="order__id-user">ID: 230803000001</h5>
+                            <button class="order__btn-sign-out"><i class="fa-solid fa-power-off"></i>Đăng xuất</button>
+                        </div>
+                        <div class="order__history">
+                            <div class="order__description">
+                                <i class="fa-solid fa-clipboard"></i>
+                                <span class="order__heading">lịch sử đơn hàng</span>
+                            </div>
+                            <div class="order__detail">
+                                <span>Chọn ngày kết xuất dữ liệu</span>
+                                <div class="order__detail-input">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Date Range(MM/DD/YYYY)"
+                                        id="calendar"
+                                        disabled
+                                    />
+                                    <button class="order__calendar-icon">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                    </button>
+                                </div>
+                                <div id="order__calendar"></div>
+                                <div class="order__search">
+                                    <span>Search:</span>
+                                    <input type="text" />
+                                </div>
+                                <div class="order__table">
+                                    <table
+                                        class="table table-striped table-bordered table-hover dataTable"
+                                        id="tbl_datatable"
+                                        aria-describedby="tbl_datatable_info"
+                                    >
+                                        <thead>
+                                            <tr role="row">
+                                                <th
+                                                    class="sorting_asc"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-sort="ascending"
+                                                    aria-label="TT: activate to sort column descending"
+                                                    style="width: 50.2px; background-color: #fff; color: #000"
+                                                >
+                                                    TT
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="SẢN PHẨM: activate to sort column ascending"
+                                                    style="width: 147.4px; background-color: #fff; color: #000"
+                                                >
+                                                    SẢN PHẨM
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="THÔNG TIN ĐƠN HÀNG: activate to sort column ascending"
+                                                    style="width: 292.4px; background-color: #fff; color: #000"
+                                                >
+                                                    THÔNG TIN ĐƠN HÀNG
+                                                </th>
+                                                <th
+                                                    class="sorting"
+                                                    role="columnheader"
+                                                    tabindex="0"
+                                                    aria-controls="tbl_datatable"
+                                                    rowspan="1"
+                                                    colspan="1"
+                                                    aria-label="THÔNG TIN NHẬN HÀNG: activate to sort column ascending"
+                                                    style="width: 308.2px; background-color: #fff; color: #000"
+                                                >
+                                                    THÔNG TIN NHẬN HÀNG
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                            <tr class="odd">
+                                                <td valign="top" colspan="4" class="dataTables_empty">
+                                                    Không tìm thấy dữ liệu
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer__contact">
+                <div class="container">
+                    <div class="footer__list">
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <ul class="footer__description">
+                                <li><span>KHO MIAFOOD</span></li>
+                                <li>Email: <span>contact@miafood.com</span></li>
+                                <li>Hotline : <span>0869918618</span></li>
+                                <li>GPKD: 0317513434</li>
+                                <li>SỐ ATVSTP: GOODVNA07122.HACCP</li>
+                            </ul>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-regular fa-comment-dots"></i>
+                            </div>
+                            <h5 class="footer__heading">Sản phẩm</h5>
+                            <ul class="footer__description footer__description--transtition">
+                                <li>Đồ ăn vặt</li>
+                                <li>Khô tẩm vị</li>
+                                <li>Bánh các loại</li>
+                                <li>Kẹo các loại</li>
+                                <li>Các loại đậu</li>
+                                <li>Hạt dinh dưỡng</li>
+                                <li>Trái cây sấy</li>
+                                <li>Mứt các loại</li>
+                            </ul>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__icon">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <h5 class="footer__heading">Liên kết</h5>
+                            <ul class="footer__description footer__description--transtition">
+                                <li>Fan Page</li>
+                                <li>Zalo Official</li>
+                                <li>Zalo nhóm sỉ</li>
+                                <li>Bảng giá sỉ</li>
+                                <li>Bảng giá lẻ</li>
+                                <li>Shopee</li>
+                                <li>Lazada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__policy">
+                <div class="container">
+                    <div class="footer__policy-text">
+                        <span style="margin-right: 125px">chính sách bảo mật</span>
+                        <span>quy chế hoạt động</span>
+                    </div>
+                    <div class="footer__policy-logo">
+                        <div>
+                            <img src="./assets/img/logoSaleNoti.png" alt="" style="width: 160px !important" />
+                        </div>
+                        <div>
+                            <img src="./assets/img/haccp.jpg" alt="" style="width: 80px !important" />
+                        </div>
+                    </div>
+                    <ul class="footer__policy-info">
+                        <li>CÔNG TY TNHH TMDV THỰC PHẨM MINH ANH</li>
+                        <li>Địa chỉ: 56 Bis Trương Đình Hội, Phường 16, Quận 8, Thành Phố Hồ Chí Minh, Việt Nam.</li>
+                        <li>Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Thị Anh Thư - Điện thoại liên hệ: 0869918618</li>
+                        <li>
+                            Mã số doanh nghiệp: 0317513434 do Sở Kế hoạch & Đầu tư TP HCM cấp lần đầu ngày 12/10/2022
+                        </li>
+                        <li>© 2022 - Bản quyền thuộc về CÔNG TY TNHH TMDV THỰC PHẨM MINH ANH</li>
+                    </ul>
+                    <p class="footer__policy-version">Version build: 1.7</p>
+                </div>
+            </div>
+        </footer>
+        <script src="./script/theodoidonhang.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/index.global.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.8/index.global.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const calendarEl = document.getElementById('order__calendar');
+                const calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                });
+                calendar.render();
+            });
+        </script>
+    </body>
+</html>
